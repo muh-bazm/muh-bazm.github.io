@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Bazm | AI / Data Scientist</title>
+  <style>
+    :root {
+      --primary: #8b1e1e;
+      --primary-dark: #6d1515;
+      --bg: #f6f3f2;
+      --card: #ffffff;
+      --text: #2d2d2d;
+      --muted: #6d6d6d;
+      --border: #eadfdd;
+      --shadow: 0 16px 40px rgba(90, 20, 20, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #fbf8f7 0%, #f3efee 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .resume {
+      display: grid;
+      grid-template-columns: 1.1fr 1.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar {
+      padding: 34px 30px;
+      position: sticky;
+      top: 24px;
+    }
+
+    .main {
+      padding: 34px 36px;
+    }
+
+    .name {
+      font-size: 2.25rem;
+      line-height: 1.15;
+      margin: 0 0 8px 0;
+      letter-spacing: 0.02em;
+      color: var(--primary-dark);
+    }
+
+    .tagline {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+
+    .contact {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact span {
+      display: block;
+    }
+
+    .section-title {
+      margin: 0 0 18px 0;
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--primary);
+      color: var(--primary-dark);
+      font-size: 1.18rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section + .section {
+      margin-top: 30px;
+    }
+
+    .profile p {
+      margin: 0;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      background: #f8efee;
+      color: var(--primary-dark);
+      border: 1px solid #e6d3d0;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    .exp-item {
+      padding: 0 0 22px 0;
+      margin: 0 0 24px 0;
+      border-bottom: 1px dashed #dfd2cf;
+    }
+
+    .exp-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .job-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #2f2f2f;
+      margin: 0;
+    }
+
+    .company {
+      color: var(--primary);
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 6px 0 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .edu-item + .edu-item {
+      margin-top: 18px;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #2f2f2f;
+      margin: 0 0 4px 0;
+    }
+
+    .edu-school {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .skill-group + .skill-group {
+      margin-top: 16px;
+    }
+
+    .skill-group strong {
+      color: var(--primary-dark);
+    }
+
+    .cert-badge {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid #ddcecb;
+      background: #faf6f6;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .languages ul {
+      list-style: disc;
+    }
+
+    .footer-note {
+      margin-top: 28px;
+      font-size: 0.9rem;
+      color: #8c7b79;
+    }
+
+    @media (max-width: 900px) {
+      .resume {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        margin: 16px auto;
+        padding: 0 12px;
+      }
+
+      .sidebar,
+      .main {
+        padding: 24px 20px;
+        border-radius: 16px;
+      }
+
+      .name {
+        font-size: 1.8rem;
+      }
+
+      .tagline {
+        font-size: 0.95rem;
+      }
+
+      .section-title {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="resume">
+      <aside class="sidebar card">
+        <header>
+          <h1 class="name">MUHAMMAD BAZM</h1>
+          <div class="tagline">AI / Data Scientist | Production ML (PyTorch, SQL, Docker) | NLP & Retrieval | Forecasting &amp; Time Estimation</div>
+          <div class="contact">
+            <span><strong>Email:</strong> <a href="mailto:muh.bazm@gmail.com">muh.bazm@gmail.com</a></span>
+            <span><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/muhammad-bazm" target="_blank">linkedin.com/in/muhammad-bazm</a></span>
+          </div>
+        </header>
+
+        <section class="section profile">
+          <h2 class="section-title">Profile</h2>
+          <ul>
+            <li>AI/Data Scientist with 5+ years building and shipping ML systems across healthcare NLP, recommendation/search, and forecasting.</li>
+            <li>Strong end-to-end delivery: problem framing, modeling, evaluation, and production deployment via containerized services and SQL-driven data workflows.</li>
+            <li>Comfortable operating in cross-functional environments (product/engineering) and owning ambiguous problem spaces from prototype to production.</li>
+          </ul>
+        </section>
+
+        <section class="section education">
+          <h2 class="section-title">Education</h2>
+          <div class="edu-item">
+            <div class="edu-degree">M.Sc. in IT Engineering</div>
+            <div class="edu-school">University of Tehran</div>
+            <div class="meta">2017 – 2020</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">B.Sc. in IT Engineering</div>
+            <div class="edu-school">IASBS</div>
+            <div class="meta">2009 – 2013</div>
+          </div>
+        </section>
+
+        <section class="section certificates">
+          <h2 class="section-title">Certificates</h2>
+          <span class="cert-badge">AWS Cloud Practitioner</span>
+        </section>
+
+        <section class="section languages">
+          <h2 class="section-title">Languages</h2>
+          <ul>
+            <li>English: Professional Proficiency</li>
+            <li>German: Intermediate (B1)</li>
+            <li>Persian (Farsi): Native</li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="main card">
+        <section class="section experience">
+          <h2 class="section-title">Experience</h2>
+
+          <article class="exp-item">
+            <h3 class="job-title">Data Scientist</h3>
+            <div class="company">ID-Berlin GmbH</div>
+            <div class="meta">2023 – Present · Berlin, Germany</div>
+            <ul>
+              <li>Built and deployed a primary-diagnosis detection model for hospital text data using PyTorch/BERT, delivered as a containerized production service.</li>
+              <li>Developed an unsupervised acronym expansion approach for German medical text standardization using BERT (TensorFlow), improving downstream model input quality.</li>
+              <li>Co-developed AI-WorkList: a multi-task deep learning system to refine suggested codes and identify primary diagnoses (PyTorch), aligning modeling choices with product and engineering constraints.</li>
+            </ul>
+          </article>
+
+          <article class="exp-item">
+            <h3 class="job-title">Data Scientist</h3>
+            <div class="company">Ababax Health GmbH</div>
+            <div class="meta">2022 – 2023 · Berlin, Germany</div>
+            <ul>
+              <li>Designed and implemented a visual recommender system using CNN embeddings and FAISS similarity search (Python, Keras), focusing on retrieval quality and latency.</li>
+              <li>Ran statistical analysis for neuro-cognitive experiments to validate hypotheses and support feature decisions (NumPy, Pandas, SciPy).</li>
+            </ul>
+          </article>
+
+          <article class="exp-item">
+            <h3 class="job-title">Machine Learning Consultant</h3>
+            <div class="company">Fieldstream Media</div>
+            <div class="meta">2021 – 2022 · Stockholm, Sweden</div>
+            <ul>
+              <li>Developed a transfer-learning classification model end-to-end (TensorFlow/Keras): data preparation, feature design, evaluation, and iteration.</li>
+              <li>Built a time series forecasting pipeline with a Temporal Fusion Transformer to predict income variations and support planning (Keras).</li>
+            </ul>
+          </article>
+
+          <article class="exp-item">
+            <h3 class="job-title">Machine Learning Engineer</h3>
+            <div class="company">AI Chapter – BaSalam.com</div>
+            <div class="meta">2020 – 2021 · Qom, Iran</div>
+            <ul>
+              <li>Built and deployed fraud detection pipelines leveraging Kafka for event-driven monitoring of referral activity in production workflows.</li>
+              <li>Orchestrated data ingestion with Apache Airflow and delivered a visual search capability (TensorFlow) as part of a broader ML platform.</li>
+            </ul>
+          </article>
+
+          <article class="exp-item">
+            <h3 class="job-title">Data Scientist</h3>
+            <div class="company">University of Tehran – Social Networks Lab</div>
+            <div class="meta">2018 – 2020 · Tehran, Iran</div>
+            <ul>
+              <li>Developed a distributed Instagram crawler for behavioral analysis using Python, RabbitMQ, Neo4j.</li>
+              <li>Implemented an emotion detection system for Persian tweets (TensorFlow), including dataset preparation, experimentation, and evaluation.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section skills">
+          <h2 class="section-title">Skills</h2>
+
+          <div class="skill-group">
+            <strong>ML / AI:</strong> Agentic-AI, Large Language Models (LLM), LangChain, Retrieval Augmented Generation (RAG), PyTorch, TensorFlow, Keras, scikit-learn, feature engineering, evaluation &amp; optimisation
+          </div>
+
+          <div class="skill-group">
+            <strong>NLP &amp; Retrieval:</strong> BERT-based NLP; embedding models; similarity search (FAISS)
+          </div>
+
+          <div class="skill-group">
+            <strong>Forecasting:</strong> time series forecasting; Temporal Fusion Transformer
+          </div>
+
+          <div class="skill-group">
+            <strong>Data:</strong> Python (Pandas, NumPy, SciPy); SQL; hypothesis testing
+          </div>
+
+          <div class="skill-group">
+            <strong>Production &amp; Data Pipelines:</strong> Docker, Podman; Airflow; Kafka; Celery; RabbitMQ; Git; Linux
+          </div>
+        </section>
+
+        <div class="footer-note">Designed to match the red-and-white visual style of the original CV.</div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
